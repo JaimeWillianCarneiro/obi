@@ -8,13 +8,15 @@ s,t = [int(i) for i in input().split()]
 
 # matriz de adjacências
 adj = [[False for i in range(s)] for i in range(s)]
+#  Inicialmente não há adjacências, por isso o False
+
 
 for i in range(t):
     i,j = [int(i) for i in input().split()]
     i -= 1
     j -= 1
 
-    #  Ele salva vakires
+    #  Ele salva valores Booleanos para os tuneis (True se existem, inicia,ente)
     adj[i][j] = True
     adj[j][i] = True
 
@@ -22,6 +24,8 @@ p = int(input())
 
 total = 0
 for i in range(p):
+
+
     passeio = [int(i) for i in input().split()]
     ok = True
     corrente = passeio[1] - 1

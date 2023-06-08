@@ -27,6 +27,8 @@ p = int(input())
 
 possiveis = 0 
 
+
+
 for _ in range(p):
     caminho = 1
     
