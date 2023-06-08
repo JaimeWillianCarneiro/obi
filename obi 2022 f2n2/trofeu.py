@@ -1,3 +1,5 @@
+#  100/100
+
 pontuacoes = [int(input()) for i in range(5)]
 
 diferentes = set(pontuacoes)
