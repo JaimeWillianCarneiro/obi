@@ -11,6 +11,10 @@ tuneis = [[] for i in range(s)]
 
 
 
+
+
+
+
 for _ in range(t):
     x, y = map(int, input().split())
     
