@@ -34,7 +34,6 @@ for i in range(T):
     elif altura[a] < altura[b]:
         adj[b].append(a)
 
-print(visitado)
-print(adj)
+
 busca(P-1)
 print(alcancados-1)
