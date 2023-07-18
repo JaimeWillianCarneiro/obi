@@ -22,14 +22,14 @@ def dfs(x, y, vigiada, visitada, n, m):
         vx, vy = x + dx[d], y + dy[d]
 
         
-        # Analisar se a proxima coluna 
+        # Analisar se o proximo passo é "possível"
         if n < vx or vx == 0:
             if vx<0:
                 print(vx)
             continue
     
 
-        if m < vy or vy <= 0:
+        if m < vy or vy == 0:
             continue
 
         if vigiada[vx][vy] or visitada[vx][vy]:
