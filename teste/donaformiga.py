@@ -1,22 +1,37 @@
-s, t, p = [int(i) for i in input().split()]
-alturas = [int(i) for i in input().split()]
-adj = [[False for _ in range(s)] for _ in range(s)]
+#!/usr/bin/env python3
 
-print(alturas)
+# OBI2020
+# dona formigA sALOES
 
-for _ in range(t):
-    i, j = [int(i)-1 for i in input().split()]
-    # print(adj[i])
-    if alturas[i] > alturas[j]: 
-        adj[i][j] = True
-    elif alturas[j] > alturas[i]:
-        adj[j][i] = True
-        
-    # print(adj[i])
-        
+alcancados = 0
 
-for x in range(adj[p-1]):
-    if x:
-        
+def busca(k):
+    # variavel global
+    global alcancados
+    
+    
+    if not visitado[k]:
+        alcancados += 1
+        visitado[k] = True
+        for q in adj[k]:
+            busca(q)
 
+S, T, P = [int(i) for i in input().split()]
+altura =  [int(i) for i in input().split()]
+visitado =  [False for i in range(S)]
 
+adj = [[] for i in range(S)]
+
+for i in range(T):
+    a,b = [int(i) for i in input().split()]
+    a -= 1
+    b -= 1
+    
+    
+    if altura[a] > altura[b]:
+        adj[a].append(b)
+    elif altura[a] < altura[b]:
+        adj[b].append(a)
+
+busca(P-1)
+print(alcancados-1)
