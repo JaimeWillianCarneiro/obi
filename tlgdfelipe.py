@@ -17,3 +17,5 @@ for tipo, a, b in interacoes:
     else:
         pontes[a].add(b)
         pontes[b].add(a)
+        
+print(pontes)
