@@ -15,7 +15,8 @@ for i in range(n-1):
 
 
 def dfs_caminho(grafo, inicio, destino, visitados=None):
-    # Criar um set para 
+    
+    # Criar um conjunto para salvar os visitados 
     if visitados is None:
         visitados = set()
     
