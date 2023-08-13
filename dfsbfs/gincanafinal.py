@@ -1,7 +1,14 @@
 #  Solução Final gincana obi 2011
+
+
 def bfs(grafo, inicio,visitados): 
+
+
      fila = [inicio] 
+
      visitados.add(inicio) 
+
+
      grupo = set([inicio]) 
      primeiroElemento = 0 
   
@@ -23,8 +30,9 @@ def contar_grupos(grafo):
   
      for no in grafo: 
          if no not in visitados: 
-             
+             print(visitados)
              group = bfs(grafo, no, visitados) 
+             print(group)
              numerodegrupos += 1 
              # print("Equipe", num_groups, ":", group) 
   
