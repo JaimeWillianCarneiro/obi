@@ -8,14 +8,17 @@ def dijkstra(grafo, origem, destino):
 
 
     distancias[origem] = 0
-    prioridade = [(0, origem)]
-    # print(prioridade)
+
+    prioridade = [(0, origem)] #É uma fila de prioridade que armazena tuplas contendo a distância atual e o vertice
+
+
+    # Roda enquanto a lista de prioridade tiver algum elemento 
     while prioridade:
 
 
         atual_dist, atual_vertice = heapq.heappop(prioridade) #  Remove o elemento de menor distância (o primeiro elemento do heap) 
                                                                 #da fila de prioridade e atribui o valor da distância e do
-        # print(prioridade)                                                                #  vértice a atual_dist e atual_vertice, respectivamente.
+        print(prioridade)                                                                #  vértice a atual_dist e atual_vertice, respectivamente.
         
         if atual_dist > distancias[atual_vertice]:
             continue
@@ -25,9 +28,12 @@ def dijkstra(grafo, origem, destino):
             return distancias[atual_vertice]
 
         for vizinho, peso in grafo[atual_vertice].items():
+
+
             distancia = atual_dist + peso
             if distancia < distancias[vizinho]:
                 distancias[vizinho] = distancia
+
                 heapq.heappush(prioridade, (distancia, vizinho))
 
 
@@ -58,16 +64,16 @@ grafo = {int(i): {} for i in range(1, n+1) }
 for _  in range(m):
     a,b, c= map(int, input().split())
     grafo[a][b] = c
-    grafo[b][a] = a
+    grafo[b][a] = c
 
 
 
 menor_caminho = dijkstra(grafo, origem, destino)
-if menor_caminho != float('inf'):
-    print(f"Menor caminho entre '{origem}' e '{destino}' é: {menor_caminho}")
-else:
-    print(f"Não há caminho entre '{origem}' e '{destino}' no grafo.")
+# if menor_caminho != float('inf'):
+#     print(f"Menor caminho entre '{origem}' e '{destino}' é: {menor_caminho}")
+# else:
+#     print(f"Não há caminho entre '{origem}' e '{destino}' no grafo.")
 
-
+print(menor_caminho)
 
 
