@@ -13,13 +13,14 @@ anilhas = 0
 somaEsquerda = esquerda[-1]
 somaDireita = direita[0]
 
+ok = False
 
-while True:
+while not ok:
     if somaEsquerda== somaDireita:
     
 
         anilhas = l+1 + (d-(r+1))-1
-        break
+        ok = True
     else:
     
         if esquerda[l] < direita[r]:
