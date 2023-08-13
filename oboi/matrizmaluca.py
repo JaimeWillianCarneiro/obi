@@ -5,7 +5,7 @@ matriz = [[int(i) for i in input().split()] for _ in range(n)]
 pontosEnzo = 0 
 pontosLobo = 0 
 
-for _  in range(p):
+for linha   in range(1, p+1):
     pontos = 0 
 
     l, c = map(int, input().split()) 
@@ -22,7 +22,7 @@ for _  in range(p):
     
     pontos-= matriz[l-1][c-1]
 
-    if i%2==1:
+    if linha%2==1:
         pontosEnzo+= pontos
     else:
         pontosLobo+=pontos
