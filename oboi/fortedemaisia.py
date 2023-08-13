@@ -12,11 +12,10 @@ somaEsquerda = sum(esquerda)  # Alteração 1: Calcular a soma de esquerda
 somaDireita = sum(direita)    # Alteração 2: Calcular a soma de direita
 
 while True:
-    print(l, r)
-    print(somaEsquerda, somaDireita)
-    print()
+
+
     if somaEsquerda == somaDireita:
-        print(l, r)
+        
         anilhas = l + d- (r+1) 
         break
     else:
