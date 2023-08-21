@@ -20,8 +20,7 @@ for linha   in range(1, p+1):
         matriz[j][c-1] = 0 
 
     
-    pontos-= matriz[l-1][c-1]
-
+    
     if linha%2==1:
         pontosEnzo+= pontos
     else:
