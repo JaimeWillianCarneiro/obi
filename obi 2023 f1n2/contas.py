@@ -6,7 +6,7 @@ f = int(input())
 
 p = int(input())
 
-maiorNumero = " nn vriou"
+maiorNumero = 0
 
 dividas = [ a, f, p]
 dividas = sorted(dividas)
