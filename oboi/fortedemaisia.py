@@ -1,4 +1,3 @@
-# Processo de fora para dentro
 e, d = map(int, input().split())
 
 esquerda = [int(i) for i in input().split()]
@@ -16,7 +15,7 @@ while True:
 
     if somaEsquerda == somaDireita:
         
-        anilhas = l + d- (r+1) 
+        # anilhas = l + d- (r+1) 
         break
     else:
      
@@ -24,12 +23,13 @@ while True:
         if somaEsquerda >somaDireita :  # Alteração 3: Correção da condição
             somaEsquerda -= esquerda[l]
             l += 1
+            anilhas +=1
             
         else:
    
             
             somaDireita -= direita[r]
-                    
+            anilhas+=1 
             
             r -= 1
         #else:
